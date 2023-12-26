@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link href="dist/output.css" rel="stylesheet" />
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+      } else {
+      document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- header start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home">
+              <img src="/dist/img/navbar/1.png" width ="120px"  >
+            </a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+            <!-- list button -->
+            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-blc dark:shadow-slate-400 dark:lg:bg-transparent">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="text-base text-blc py-2 mx-8 flex group-hover:text-primary dark:text-white">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#project" class="text-base text-blc py-2 mx-8 flex group-hover:text-primary dark:text-white">Project</a>
+                </li>
+                <li class="group">
+                  <a href="#skills" class="text-base text-blc py-2 mx-8 flex group-hover:text-primary dark:text-white">Skill</a>
+                </li>
+                </li>
+                <li class="group">
+                  <a href="#contact" class="text-base text-blc py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
+                </li>
+                <li class="flex items-center pl-6">
+                  <div class="flex">
+                    <span class="dark:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                      <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+                    </svg>
+                    </span>
+                    <input type="checkbox" class="hidden" id="dark-toggle">
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-primary p-1 mr-2 ml-2">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+
+                        </div>
+                      </div>
+                    </label>
+                    <span class="dark:text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                      <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <section id="home" class="pt-36 dark:bg-blc ">
+      <div class="container">
+        <div class="flex flex-wrap text">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-primary md:text-xl lg:text-2xl">
+              Hello, I'm
+              <span class="block font-bold text-blc text-4xl mt-1 lg:text-5xl dark:text-white">Hanifan Budi Hartono </span>
+              
+            </h1>
+            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl dark:text-white">
+              Student at <span class="text-red-600">Code</span> Masters
+            </h2>
+            <p class="font-medium text-secondary mb-10 leading-relaxed">
+              I'm probably the most passionate web development you will ever get to work with. If you have a great project,<span class="font-bold text-black dark:text-white"> Just hit below!</span> 
+            </p>
+
+            <a
+              href="#"
+              class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:bg-bg hover:text-primary ease-in-out"
+              >Contact</a
+            >
+          </div>
+          <!-- main 2 -->
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:mt-10 lg:right-0">
+              <img src="dist/img/ft.png" alt="Evan"
+              class="max-w-full mx-auto relative z-10" />
+              <span class="absolute bottom-20 left-1/2 -translate-x-1/2"> 
+                <svg width="400" heigt="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#F14E95" d="M63.5,-49.8C79.2,-31,86.6,-4.8,81.6,19.4C76.7,43.5,59.5,65.6,37,76.2C14.6,86.7,-13.1,85.7,-35.6,74.7C-58.2,63.6,-75.5,42.4,-80.7,18.6C-86,-5.1,-79.2,-31.4,-63.7,-50.1C-48.2,-68.9,-24.1,-80.1,-0.1,-80C23.9,-80,47.9,-68.6,63.5,-49.8Z" transform="translate(100 100)" />
+                </svg>
+                <!-- <img width="400" src="dist/img/stacked-waves-haikei.svg" alt="" > -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main end -->
+
+    <!-- about start -->
+    <section id="about" class="pt-36 pb-32 dark:bg-blc">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/2" >
+            <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
+            <h2 class="font-bold text-blc text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">An ordinary guy, who wants to work in the tech industry</h2>
+            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">A man with a degree in computer science, 2022 graduate in Bali</p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3 class="font-semibold text-blc text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Let's Work Together</h3>
+            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">If you have any problem,come let me help you!</p>
+            <div class="flex items-center dark:text-white">
+              <!-- slack -->
+              <a href="https://yog3.slack.com/team/U06736CUQ6Q" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-black hover:border-primary hover:bg-primary hover:text-white dark:border-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Slack</title>
+                  <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+                </svg>
+              </a>
+              <!-- linkedin -->
+
+              <a href="https://www.linkedin.com/in/hanifan-budi-hartono-79b6b0224/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-black hover:border-primary hover:bg-primary hover:text-white dark:border-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <!-- twitter / x -->
+
+              <a href="https://twitter.com/EvankhellM" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-black hover:border-primary hover:bg-primary hover:text-white dark:border-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- about end -->
+    
+    <!-- project start -->
+    <section id="project" class="pt-36 pb-16 bg-slate-200 dark:bg-slate-700">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <!-- <h4 class="font-semibold text-lg text-primary mb-2">Project</h4> -->
+            <h2 class="font-bold text-primary text-3xl mb-4 sm:text-4xl lg:text-5xl">Project</h2>
+            <p class="font-medium text-md text-blc md:text-lg dark:text-white" >Projects I have worked for in the past.</p>
+          </div>
+        </div>
+
+        <div class="w-full px-4 flex flex-wrap justify-center xl:mx-auto xl:w-10/12 ">
+          <div class="mb-12 p-4 md:w-1/2 ">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img src="dist/img/porto/1.jpg" alt="1" width="w-full">
+            </div>
+            <h3 class="font-semibold text-xl text-blc mt-5 mb-3 dark:text-white" >Wedding</h3>
+            <p class="font-medium text-base text-secondary">Wedding invitation online with RSVP </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2 ">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img src="dist/img/porto/2.PNG" alt="1" width="w-full">
+            </div>
+            <h3 class="font-semibold text-xl text-blc mt-5 mb-3 dark:text-white">Reservation Travel</h3>
+            <p class="font-medium text-base text-secondary">The website will display car data, guests, monthly income, etc</p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2 ">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img src="dist/img/porto/3.PNG" alt="1" width="w-full">
+            </div>
+            <h3 class="font-semibold text-xl text-blc mt-5 mb-3 dark:text-white">Reservation Tour Package</h3>
+            <p class="font-medium text-base text-secondary">Fill out the form then choose the package you want to choose, destination, type of car and breakfast</p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2 ">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img src="dist/img/porto/4.png" alt="1" width="w-full">
+            </div>
+            <h3 class="font-semibold text-xl text-blc mt-5 mb-3 dark:text-white">Thank You !</h3>
+            <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae quos atque beatae eum. Veritatis, repellat.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- project end -->
+
+    <!-- skill start -->
+    <section id="skills" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto text-center mb-16">
+            <!-- <h4 class="font-semibold text-lg text-primary mb-2">Skills</h4> -->
+            <h2 class="font-bold text-primary text-3xl mb-4 sm:text-4xl lg:text-5xl">My Skills</h2>
+            <p class="font-medium text-md text-secondary md:text-lg dark:text-black">With skills i have now, I am the perfect person to hire when it comes to a web project. Whatever your needs are, I can pretty much take on any challenge.</p>
+          </div>
+        </div>
+
+        <div class="w-full px-4">
+          <div class=" flex flex-wrap items-center justify-center">
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="dist/img/logo/1.png" alt="">
+            </a>
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="dist/img/logo/2.png" alt="">
+            </a>
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="dist/img/logo/3.png" alt="">
+            </a>
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="dist/img/logo/4.png" alt="">
+            </a>
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="dist/img/logo/5.png" alt="">
+            </a>
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="dist/img/logo/6.png" alt="">
+            </a>
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="dist/img/logo/7.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- skill end -->
+
+    <!-- testi start -->
+    <section id="testi" class="pt-36 pb-32 bg-slate-100 dark:bg-blc">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <!-- <h4 class="font-semibold text-lg text-primary mb-2">Galerry</h4> -->
+            <h2 class="font-bold text-primary text-3xl mb-4 sm:text-4xl lg:text-5xl">Testimonials</h2>
+            <p class="font-medium text-md text-secondary md:text-lg" >This is what people say about me.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
+              <img src="https://source.unsplash.com/360x200?wedding" alt="wedding" class="w-full" >
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="block mb-3 font-semibold text-xl text-blc hover:text-primary truncate dark:text-white">The Wedding of Popol & Kupa</a>
+                </h3>
+                <p class="font-medium text-base text-secondary mb-6">‘’Evan is one of the best web dev I have worked with in my entire life.’’</p>
+                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-75">Read More</a>
+              </div>
+            </div>
+            
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
+              <img src="https://source.unsplash.com/360x200?hotel" alt="" class="w-full" >
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="block mb-3 font-semibold text-xl text-blc hover:text-primary truncate dark:text-white">Reservation Hotel Land of Dawn</a>
+                </h3>
+                <p class="font-medium text-base text-secondary mb-6">’I think Evan has an incredible gift. It has been an absolute pleasure to work with.’’</p>
+                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-75">Read More</a>
+              </div>
+            </div>
+            
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
+              <img src="https://source.unsplash.com/360x200?cars" alt="" class="w-full" >
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="block mb-3 font-semibold text-xl text-blc hover:text-primary truncate dark:text-white">Cars Reservation Granger Tour</a>
+                </h3>
+                <p class="font-medium text-base text-secondary mb-6">''All I can say, Evan is a great web dev. I like the focus, passion and attention to detail of the project.”</p>
+                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-75">Read More</a>
+              </div>
+            </div>
+            
+          </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- testi end -->
+
+    <!-- contact start -->
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Let’s talk business</h4>
+            <h2 class="font-bold text-primary text-3xl mb-4 sm:text-4xl lg:text-5xl">Contact Us</h2>
+            <p class="font-medium text-md text-secondary md:text-lg">
+            Now that you know a lot about me, let me know if you are interested to work with me.</p>
+          </div>
+          <form action="">
+            <div class="w-full lg:w-2/3 lg:mx-auto">
+            <div class="w-full px-4 mb-8">
+              <label for="name" class="text-base font-bold text-primary">Name</label>
+              <input type="text" id="name" class="w-full bg-slate-200 text-blc p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="email" class="text-base font-bold text-primary">Email</label>
+              <input type="email" id="email" class="w-full bg-slate-200 text-blc p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="message" class="text-base font-bold text-primary">Message</label>
+              <textarea type="text" id="email" class="w-full bg-slate-200 text-blc p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-30">
+              </textarea>
+            </div>
+            <div class="w-full px-4">
+              <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500"> Send
+
+              </button>
+
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- contact end -->
+
+    <!-- footer start -->
+    <footer class="bg-blc pt-24 pb-12">
+      <div class="container">
+        <div class="flex flex-wrap"> 
+          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+            <h2 class="font-bold text-4xl text-white mb-5">Evan</h2>
+            <h3 class="font-bold text-2xl mb-2">Call us</h3>
+            <p>evankhell666@hotmail.com</p>
+            <p>Yogyakarta</p>
+            <p>CodeMasters.id</p>
+          </div>
+          <!-- <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">Kategori tulisan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#" class="inline-block text-base hover:text-primary mb-3">Programing</a>
+              </li>
+              <li>
+                <a href="#" class="inline-block text-base hover:text-primary mb-3">Programing</a>
+              </li>
+              <li>
+                <a href="#" class="inline-block text-base hover:text-primary mb-3">Programing</a>
+              </li>
+            </ul>
+
+          </div> -->
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">Links</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#home" class="inline-block text-base hover:text-primary mb-3">Home</a>
+              </li>
+              <li>
+                <a href="#project" class="inline-block text-base hover:text-primary mb-3">Project</a>
+              </li>
+              <li>
+                <a href="#skills" class="inline-block text-base hover:text-primary mb-3">Skill</a>
+              </li>
+              <li>
+                <a href="#contact" class="inline-block text-base hover:text-primary mb-3">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <!-- footer copyright -->
+        <div class="w-full pt-10 border-t border-slate-700" >
+          
+          <p class="font-medium text-sm text-slate-500 text-center"> Created by <a href="https://www.linkedin.com/in/hanifan-budi-hartono-79b6b0224/" target="_blank" class="font-bold text-primary">Hanifan Budi Hartono ✌️ </a></p>
+        </div>
+      </div>
+
+    </footer>
+    <!-- footer end -->
+
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
